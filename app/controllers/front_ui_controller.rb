@@ -38,6 +38,14 @@ class FrontUiController < ApplicationController
     render nothing: true
   end
 
+  def view_map
+    # @map = Map.find_by(slug: params[:id])
+    @map= Map.last
+    @map.zoom ||= 12
+    @embed = true
+    # render template: 'maps/show'
+  end
+
   def about; end
 
   def gallery
