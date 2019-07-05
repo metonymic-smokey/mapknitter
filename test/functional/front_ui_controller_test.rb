@@ -35,4 +35,13 @@ class FrontUiControllerTest < ActionController::TestCase
     assert assigns(:nearby_mappers)
     assert_template 'front_ui/nearby_mappers'
   end
+
+  test 'view map page' do
+    map = maps(:saugus)
+    get :view_map, id: map.slug
+
+    assert_response :success
+    assert assigns(:mappers)
+    assert_template 'front_ui/view_map'
+  end
 end
