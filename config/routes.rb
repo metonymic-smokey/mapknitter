@@ -10,6 +10,7 @@ Mapknitter::Application.routes.draw do
   get 'about' => 'front_ui#about'
   get 'all_maps' => 'front_ui#all_maps'
   get 'anonymous' => 'front_ui#anonymous'
+  get 'm/:id' => 'front_ui#view_map'
 
   get 'external_url_test' => 'export#external_url_test'
   get 'local/:login' => 'sessions#local'
