@@ -55,29 +55,39 @@
   <div class="container-fluid">
       <div class="row text-center lead-text" id="info">
           <div class="col-md-3 col-sm-5 offset-2">
-          <img class="mx-auto d-block" style="max-height: 75px; max-width: 75px;" src="<%= asset_path('quiz.png') %>">
-          <br>
+              <img class="mx-auto d-block" style="max-height: 75px; max-width: 75px;" src="<%= asset_path('quiz.png') %>">
+              <br>
               <h3>Ask a question</h3>
-              <br><br>
-              <p> Get help from others and share ideas with the PublicLab Community</p>
-              <br><br>
-              <p> <%= link_to "Ask a question", 'https://publiclab.org/questions/new', target: 'blank', class: "btn btn-lg btn-primary" %></p>
           </div>
           <div class="col-md-3 col-sm-5 offset-2">
               <img class="mx-auto d-block faded" style="max-height: 75px; max-width: 75px;" src="<%= asset_path('binoculars.png') %>">
               <br>
               <h3>Projects/ Requests for observations</h3>
+          </div>
+      </div>
+      <div class="row text-center lead-text" id="info">
+          <div class="col-md-3 col-sm-5 offset-2">
+              <p> Get help from others and share ideas with the PublicLab Community</p>
               <br>
+          </div>
+          <div class="col-md-3 col-sm-5 offset-2">
               <p> Community observations and monitoring are a key source of environmental data. Help add to one of the [projects] here. Read more or post your oen call for input</p>
+              <br>
+          </div>
+      </div>
+      <div class="row text-center lead-text" id="info">
+          <div class="col-md-3 col-sm-5 offset-2">
+              <p> <%= link_to "Ask a question", 'https://publiclab.org/questions/new', target: 'blank', class: "btn btn-lg btn-primary" %></p>
+          </div>
+          <div class="col-md-3 col-sm-5 offset-2">
               <p> <%= link_to "Post an Observation", 'https://publiclab.org/post', target: 'blank', class: "btn btn-outline-secondary btn-lg" %></p>
 
           </div>
       </div>
-  </div>
 
- <script>
-    var map
-    (function(){
+  <script>
+      var map
+      (function(){
       window.mapKnitter = new MapKnitter.Map({
         latlng:     L.latLng(<%= @map.lat %>, <%= @map.lon %>),
         zoom:       <%= @map.zoom %>,
