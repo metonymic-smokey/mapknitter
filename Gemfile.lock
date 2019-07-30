@@ -315,7 +315,7 @@ DEPENDENCIES
   pry-rails
   rails (= 4.2.11.1)
   rails-perftest
-  rake (~> 12.3.3)
+  rake (~> 12.3.2)
   rdiscount (= 2.2.0.1)
   recaptcha
   right_aws_api
